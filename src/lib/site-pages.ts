@@ -1,0 +1,17 @@
+export const SITE_PAGES = [
+  { path: "/", label: "Inicio" },
+  { path: "/all-tools/", label: "Todas las herramientas" },
+  { path: "/image-tools/", label: "Herramientas de imagen" },
+  { path: "/compress/", label: "Comprimir imágenes" },
+  { path: "/resize/", label: "Redimensionar imágenes" },
+  { path: "/convert/", label: "Convertir imágenes" },
+  { path: "/edit/", label: "Editar imágenes" },
+  { path: "/image-resizer/", label: "Redimensionar imagen" },
+  { path: "/about/", label: "Acerca de" },
+  { path: "/contact/", label: "Contacto" },
+  { path: "/blog/", label: "Blog" },
+  { path: "/sitemap/", label: "Mapa del sitio" },
+  { path: "/privacy-policy/", label: "Política de privacidad" },
+  { path: "/terms-and-conditions/", label: "Términos y condiciones" },
+  { path: "/disclaimer/", label: "Descargo de responsabilidad" },
+] as const;
