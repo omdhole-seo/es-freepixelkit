@@ -1,14 +1,8 @@
-import type { Metadata } from "next";
 import LegalDraftNotice from "@/components/legal-draft-notice";
 import InfoPage from "@/components/info-page";
 import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = createPageMetadata({
-  title: "Política de privacidad",
-  description:
-    "Consulta el borrador de privacidad de FreePixelKit y los datos operativos que deben confirmar sus responsables antes de publicarlo.",
-  path: "/privacy-policy/",
-});
+export const metadata = createPageMetadata("/privacy-policy/");
 
 export default function PrivacyPolicyPage() {
   return (

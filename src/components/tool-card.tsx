@@ -14,7 +14,6 @@ export default function ToolCard({ tool }: { tool: ToolInfo }) {
     <Link
       className="tool-card"
       href={tool.href}
-      aria-label={`${tool.name}: abrir herramienta`}
     >
       <span className="tool-card__top">
         <span className="tool-card__icon" aria-hidden="true">

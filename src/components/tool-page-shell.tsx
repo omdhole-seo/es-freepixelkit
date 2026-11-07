@@ -16,7 +16,7 @@ export default function ToolPageShell({
         <Breadcrumbs
           items={[
             { label: "Inicio", href: "/" },
-            { label: "Herramientas de imagen", href: "/#herramientas-imagen" },
+            { label: "Herramientas de imagen", href: "/#categorias" },
             { label: title },
           ]}
         />

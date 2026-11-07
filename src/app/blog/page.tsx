@@ -1,15 +1,9 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BookOpenText } from "lucide-react";
 import InfoPage from "@/components/info-page";
 import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = createPageMetadata({
-  title: "Blog",
-  description:
-    "Consulta el estado del blog de FreePixelKit. Los artículos aparecerán aquí cuando haya contenido editorial publicado.",
-  path: "/blog/",
-});
+export const metadata = createPageMetadata("/blog/");
 
 export default function BlogPage() {
   return (

@@ -7,7 +7,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Imágenes a tu medida | FreePixelKit",
+    default: "Herramientas de imagen online | FreePixelKit",
     template: "%s | FreePixelKit",
   },
   description:
@@ -24,6 +24,12 @@ export const metadata: Metadata = {
     locale: "es_ES",
     type: "website",
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

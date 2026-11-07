@@ -1,14 +1,8 @@
-import type { Metadata } from "next";
 import LegalDraftNotice from "@/components/legal-draft-notice";
 import InfoPage from "@/components/info-page";
 import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = createPageMetadata({
-  title: "Descargo de responsabilidad",
-  description:
-    "Lee el borrador de descargo de FreePixelKit, incluidos los límites de compatibilidad y las cuestiones que deben revisar sus responsables.",
-  path: "/disclaimer/",
-});
+export const metadata = createPageMetadata("/disclaimer/");
 
 export default function DisclaimerPage() {
   return (

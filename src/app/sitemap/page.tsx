@@ -1,16 +1,10 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import InfoPage from "@/components/info-page";
 import { createPageMetadata } from "@/lib/metadata";
 import { SITE_PAGES } from "@/lib/site-pages";
 
-export const metadata: Metadata = createPageMetadata({
-  title: "Mapa del sitio",
-  description:
-    "Encuentra las páginas principales, categorías de herramientas y documentos informativos de FreePixelKit.",
-  path: "/sitemap/",
-});
+export const metadata = createPageMetadata("/sitemap/");
 
 const groups = [
   {

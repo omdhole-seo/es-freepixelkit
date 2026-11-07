@@ -1,14 +1,8 @@
-import type { Metadata } from "next";
 import LegalDraftNotice from "@/components/legal-draft-notice";
 import InfoPage from "@/components/info-page";
 import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = createPageMetadata({
-  title: "Términos y condiciones",
-  description:
-    "Consulta el borrador de términos de uso de FreePixelKit y los datos que debe confirmar la persona responsable.",
-  path: "/terms-and-conditions/",
-});
+export const metadata = createPageMetadata("/terms-and-conditions/");
 
 export default function TermsPage() {
   return (

@@ -607,7 +607,7 @@ summary:focus-visible {
 }
 
 .hero-art__dimension span {
-  color: #8e8999;
+  color: var(--text-muted);
   font-size: 8px;
   font-weight: 750;
   letter-spacing: 0.09em;
@@ -620,7 +620,7 @@ summary:focus-visible {
 }
 
 .hero-art__dimension small {
-  color: #8e8999;
+  color: var(--text-muted);
   font-size: 9px;
   font-weight: 500;
 }
@@ -938,7 +938,7 @@ a.tool-card:hover .tool-card__arrow {
   position: absolute;
   top: 21px;
   right: 22px;
-  color: #c0b9cf;
+  color: var(--text-muted);
   font-size: 12px;
   font-weight: 750;
   letter-spacing: 0.07em;
@@ -1205,7 +1205,7 @@ a.tool-card:hover .tool-card__arrow {
   justify-content: space-between;
   gap: 15px;
   border-top: 1px solid var(--border);
-  color: #898493;
+  color: var(--text-muted);
   font-size: 11px;
 }
 
@@ -1228,7 +1228,7 @@ a.tool-card:hover .tool-card__arrow {
   gap: 8px;
   margin: 0;
   padding: 0;
-  color: #817c8c;
+  color: var(--text-muted);
   font-size: 12px;
   list-style: none;
 }
@@ -1415,7 +1415,7 @@ a.tool-card:hover .tool-card__arrow {
 
 .dropzone__formats {
   margin: 12px 0 0;
-  color: #918c9b;
+  color: var(--text-muted);
   font-size: 10px;
 }
 
@@ -1482,7 +1482,7 @@ a.tool-card:hover .tool-card__arrow {
 }
 
 .settings-group__heading span:last-child {
-  color: #8b8695;
+  color: var(--text-muted);
   font-size: 10px;
   font-weight: 500;
 }
@@ -1591,7 +1591,7 @@ a.tool-card:hover .tool-card__arrow {
   align-items: flex-start;
   gap: 7px;
   margin: 9px 0 0;
-  color: #85808f;
+  color: var(--text-muted);
   font-size: 10px;
   line-height: 1.55;
 }

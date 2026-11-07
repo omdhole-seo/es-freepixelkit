@@ -30,8 +30,8 @@ export default function SiteFooter() {
               alt=""
               className="brand__logo"
               height={94}
+              sizes="(max-width: 520px) 165px, 190px"
               src="/brand/freepixelkit-logo.png"
-              unoptimized
               width={270}
             />
           </Link>

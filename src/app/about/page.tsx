@@ -1,15 +1,9 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check, LockKeyhole, Sparkles } from "lucide-react";
 import InfoPage from "@/components/info-page";
 import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = createPageMetadata({
-  title: "Acerca de",
-  description:
-    "Conoce el propósito de FreePixelKit y su enfoque en herramientas claras, útiles y con funciones descritas con honestidad.",
-  path: "/about/",
-});
+export const metadata = createPageMetadata("/about/");
 
 export default function AboutPage() {
   return (

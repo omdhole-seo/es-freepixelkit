@@ -1,12 +1,14 @@
 import type { MetadataRoute } from "next";
+import { indexablePagePaths } from "@/lib/metadata";
 import { SITE_URL } from "@/lib/site";
 import { SITE_PAGES } from "@/lib/site-pages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return SITE_PAGES.map((page) => ({
+  return SITE_PAGES.filter((page) =>
+    indexablePagePaths.includes(page.path),
+  ).map((page) => ({
     url: `${SITE_URL}${page.path}`,
-    changeFrequency:
-      page.path === "/" || page.path === "/blog/" ? "weekly" : "monthly",
+    changeFrequency: page.path === "/" ? "weekly" : "monthly",
     priority:
       page.path === "/"
         ? 1

@@ -1,0 +1,92 @@
+[
+  {
+    "path": "/",
+    "title": "Herramientas de imagen online y gratuitas | FreePixelKit",
+    "description": "Encuentra herramientas de imagen online en español. Redimensiona fotos en tu navegador y consulta las funciones disponibles, sus formatos y límites conocidos.",
+    "indexable": true
+  },
+  {
+    "path": "/all-tools/",
+    "title": "Directorio de herramientas de imagen online | FreePixelKit",
+    "description": "Busca herramientas de imagen online por tarea y categoría. Revisa cuáles funcionan y abre el redimensionador para cambiar el tamaño de tus fotos fácilmente.",
+    "indexable": true
+  },
+  {
+    "path": "/image-tools/",
+    "title": "Herramientas de imagen online en español | FreePixelKit",
+    "description": "Explora herramientas de imagen en español. Redimensiona archivos JPEG, PNG y WebP y consulta qué funciones están disponibles y cuáles son sus límites por ahora.",
+    "indexable": true
+  },
+  {
+    "path": "/image-resizer/",
+    "title": "Redimensionar imágenes online gratis y fácil | FreePixelKit",
+    "description": "Redimensiona imágenes online: ajusta ancho y alto, conserva la proporción y descarga en JPEG, PNG o WebP compatible. Canvas procesa el archivo en tu navegador.",
+    "indexable": true
+  },
+  {
+    "path": "/resize/",
+    "title": "Cambiar tamaño de imagen online en píxeles | FreePixelKit",
+    "description": "Aprende a cambiar el tamaño de una imagen en píxeles, mantener sus proporciones y guardar una copia con el redimensionador de FreePixelKit en el navegador.",
+    "indexable": false
+  },
+  {
+    "path": "/compress/",
+    "title": "Comprimir imágenes: guía de calidad y peso | FreePixelKit",
+    "description": "Aprende cómo funciona la compresión de imágenes, qué puede pasar con su calidad y qué opciones ofrece actualmente FreePixelKit, sin herramientas simuladas.",
+    "indexable": false
+  },
+  {
+    "path": "/convert/",
+    "title": "Convertir imágenes: formatos compatibles | FreePixelKit",
+    "description": "Compara JPEG, PNG y WebP, incluida la transparencia, y consulta qué opciones de conversión existen hoy en FreePixelKit antes de elegir un formato disponible.",
+    "indexable": false
+  },
+  {
+    "path": "/edit/",
+    "title": "Editar imágenes online: funciones disponibles | FreePixelKit",
+    "description": "Descubre qué funciones de edición de imágenes hay disponibles y usa el redimensionador para ajustar el tamaño de una foto desde el navegador de FreePixelKit.",
+    "indexable": false
+  },
+  {
+    "path": "/about/",
+    "title": "Acerca de FreePixelKit y sus herramientas | FreePixelKit",
+    "description": "Conoce el propósito de FreePixelKit, cómo describe las funciones disponibles y qué límites tiene el procesamiento de imágenes que se realiza en el navegador.",
+    "indexable": true
+  },
+  {
+    "path": "/blog/",
+    "title": "Guías de imagen y novedades para tus fotos | FreePixelKit",
+    "description": "Consulta las guías de imagen y novedades de FreePixelKit. Los artículos aparecerán cuando haya contenido completo y revisado; todavía no hay publicaciones.",
+    "indexable": false
+  },
+  {
+    "path": "/contact/",
+    "title": "Contacto para consultas sobre FreePixelKit | FreePixelKit",
+    "description": "Consulta las opciones de contacto de FreePixelKit. El formulario solo prepara un borrador local: no envía mensajes ni datos a ninguna dirección o servidor.",
+    "indexable": false
+  },
+  {
+    "path": "/sitemap/",
+    "title": "Mapa del sitio y herramientas disponibles | FreePixelKit",
+    "description": "Encuentra las páginas principales, categorías y herramientas disponibles de FreePixelKit en este mapa de navegación para acceder a las secciones del sitio.",
+    "indexable": false
+  },
+  {
+    "path": "/privacy-policy/",
+    "title": "Política de privacidad y datos del sitio | FreePixelKit",
+    "description": "Consulta el borrador de privacidad de FreePixelKit y los datos sobre el responsable, el alojamiento y los derechos que deben confirmarse antes de publicarlo.",
+    "indexable": false
+  },
+  {
+    "path": "/terms-and-conditions/",
+    "title": "Términos de uso de herramientas de imagen | FreePixelKit",
+    "description": "Consulta los términos de uso de FreePixelKit, sus límites técnicos conocidos y la información legal que debe completar la persona responsable del servicio.",
+    "indexable": false
+  },
+  {
+    "path": "/disclaimer/",
+    "title": "Aviso legal y límites del redimensionador | FreePixelKit",
+    "description": "Revisa los límites del redimensionador de FreePixelKit, los formatos compatibles y la información legal que aún debe confirmar la persona responsable del sitio.",
+    "indexable": false
+  }
+]

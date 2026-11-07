@@ -1,11 +1,14 @@
-import type { Metadata } from "next";
 import { ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 import FaqSection from "@/components/faq-section";
 import CategoryIcon from "@/components/category-icon";
 import ImageResizer from "@/components/image-resizer";
 import ToolPageShell from "@/components/tool-page-shell";
+import { createPageMetadata } from "@/lib/metadata";
+import { SITE_URL } from "@/lib/site";
 import { categories } from "@/lib/tools";
+
+export const metadata = createPageMetadata("/image-resizer/");
 
 const resizerFaqs = [
   {
@@ -28,37 +31,49 @@ const resizerFaqs = [
     answer:
       "No. La imagen se lee y procesa localmente en tu navegador con Canvas. No se envía a nuestros servidores.",
   },
+  {
+    question: "¿Qué dimensiones admite el redimensionador?",
+    answer:
+      "Cada lado puede medir hasta 12.000 píxeles y la salida no puede superar los 100 millones de píxeles. El navegador o el dispositivo pueden imponer límites menores.",
+  },
+  {
+    question: "¿Ampliar una foto mejora su calidad?",
+    answer:
+      "No. Aumentar las dimensiones no recupera los detalles que no están en la imagen original y puede hacer que se vea menos nítida.",
+  },
 ];
-
-export const metadata: Metadata = {
-  title: "Redimensionar imagen online gratis",
-  description:
-    "Redimensiona imágenes online: cambia el ancho y el alto, conserva la proporción y descarga en JPEG, PNG o WebP compatible con tu navegador.",
-  alternates: {
-    canonical: "/image-resizer/",
-  },
-  openGraph: {
-    title: "Redimensionar imagen online gratis | FreePixelKit",
-    description:
-      "Cambia las dimensiones de una imagen y descárgala con procesamiento local en tu navegador.",
-    url: "/image-resizer/",
-    siteName: "FreePixelKit",
-    locale: "es_ES",
-    type: "website",
-  },
-};
 
 export default function ImageResizerPage() {
   const otherCategories = categories.filter(
     (category) =>
       category.slug !== "image-tools" && category.slug !== "resize",
   );
+  const applicationStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "Redimensionar imagen online",
+    url: `${SITE_URL}/image-resizer/`,
+    description:
+      "Cambia el ancho y el alto de una imagen y descarga una copia procesada con Canvas en el navegador.",
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: "Cualquier sistema con un navegador compatible",
+    inLanguage: "es",
+  };
 
   return (
     <ToolPageShell
       title="Redimensionar imagen online"
       description="Cambia el ancho y el alto de tus imágenes, mantén la proporción cuando lo necesites y guarda el resultado en un formato compatible. El procesamiento se realiza en tu navegador."
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(applicationStructuredData).replace(
+            /</g,
+            "\\u003c",
+          ),
+        }}
+      />
       <ImageResizer />
 
       <div className="tool-content">
@@ -87,13 +102,49 @@ export default function ImageResizerPage() {
         </section>
 
         <section className="content-section">
-          <h2>Una herramienta de imagen en tu navegador</h2>
+          <h2>Cómo mantener la proporción de una imagen</h2>
           <p>
-            El tamaño de salida se expresa en píxeles. Mantener la proporción
-            evita que la imagen se estire, aunque un cambio de dimensiones puede
-            afectar a la nitidez si se amplía mucho. Las imágenes se procesan
-            localmente con Canvas; el navegador puede limitar la cantidad de
-            píxeles disponible según el dispositivo.
+            El ancho y el alto se miden en píxeles. Activa «Mantener la
+            proporción» para conservar la relación entre ambos lados y evitar
+            que la foto se vea estirada. Si necesitas un tamaño distinto para
+            un diseño, puedes desactivar esa opción, pero cambiar solo una
+            dimensión puede deformar el contenido.
+          </p>
+          <p>
+            Redimensionar no es lo mismo que recortar: el redimensionador cambia
+            las dimensiones de toda la imagen y no elimina los bordes. Tampoco
+            recupera detalle al ampliar una foto pequeña; para conservar la
+            nitidez, evita superar mucho la resolución original.
+          </p>
+        </section>
+
+        <section className="content-section">
+          <h2>Formatos de imagen compatibles</h2>
+          <p>
+            Puedes cargar archivos JPEG, PNG y WebP. La lista de formatos de
+            salida se comprueba en tu navegador, así que las opciones pueden
+            variar según el dispositivo. PNG suele ser útil cuando necesitas
+            conservar zonas transparentes; JPEG no admite transparencia y el
+            redimensionador rellena esas zonas con blanco al exportar en ese
+            formato.
+          </p>
+          <p>
+            El archivo descargado es una copia nueva: conserva el original si
+            quieres comparar resultados o repetir el ajuste. Cambiar las
+            dimensiones no garantiza que el archivo pese menos; el tamaño final
+            también depende del formato y del contenido de la imagen.
+          </p>
+        </section>
+
+        <section className="content-section">
+          <h2>Procesamiento local y límites del navegador</h2>
+          <p>
+            La imagen se lee y se redimensiona con Canvas en el navegador; el
+            código de esta herramienta no la envía a nuestros servidores. El
+            redimensionador limita cada lado a 12.000 píxeles y la salida a 100
+            millones de píxeles. El navegador y la memoria disponible en tu
+            dispositivo también pueden afectar al procesamiento de imágenes
+            grandes.
           </p>
         </section>
 

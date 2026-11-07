@@ -1,15 +1,9 @@
-import type { Metadata } from "next";
 import { Mail, TriangleAlert } from "lucide-react";
 import ContactDraftForm from "@/components/contact-draft-form";
 import InfoPage from "@/components/info-page";
 import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = createPageMetadata({
-  title: "Contacto",
-  description:
-    "Consulta las opciones de contacto de FreePixelKit y prepara un borrador local. El formulario todavía no envía mensajes.",
-  path: "/contact/",
-});
+export const metadata = createPageMetadata("/contact/");
 
 export default function ContactPage() {
   return (

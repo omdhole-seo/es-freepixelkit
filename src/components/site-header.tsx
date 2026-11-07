@@ -46,9 +46,9 @@ export default function SiteHeader() {
             alt=""
             className="brand__logo"
             height={94}
-            priority
+            preload
+            sizes="(max-width: 520px) 165px, (max-width: 760px) 180px, 190px"
             src="/brand/freepixelkit-logo.png"
-            unoptimized
             width={270}
           />
         </Link>
@@ -78,10 +78,17 @@ export default function SiteHeader() {
         </div>
 
         <details className="mobile-nav" ref={mobileMenuRef}>
-          <summary aria-label="Abrir o cerrar la navegación principal">
+          <summary
+            aria-controls="mobile-navigation-panel"
+            aria-label="Abrir o cerrar la navegación principal"
+          >
             <Menu size={21} aria-hidden="true" />
           </summary>
-          <div className="mobile-nav__panel" onClick={closeMobileMenu}>
+          <div
+            className="mobile-nav__panel"
+            id="mobile-navigation-panel"
+            onClick={closeMobileMenu}
+          >
             <Link
               className="mobile-nav__brand"
               href="/"
@@ -90,8 +97,8 @@ export default function SiteHeader() {
               <Image
                 alt=""
                 height={56}
+                sizes="32px"
                 src="/brand/freepixelkit-mark.png"
-                unoptimized
                 width={56}
               />
               <span>FreePixelKit</span>
