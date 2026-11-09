@@ -50,7 +50,7 @@ export default function ImageResizerPage() {
   );
   const applicationStructuredData = {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
+    "@type": "SoftwareApplication",
     name: "Redimensionar imagen online",
     url: `${SITE_URL}/image-resizer/`,
     description:

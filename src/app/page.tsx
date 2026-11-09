@@ -11,7 +11,6 @@ import FaqSection from "@/components/faq-section";
 import ToolCard from "@/components/tool-card";
 import ToolSearch from "@/components/tool-search";
 import { createPageMetadata } from "@/lib/metadata";
-import { SITE_URL } from "@/lib/site";
 import { availableTools, categories } from "@/lib/tools";
 
 export const metadata = createPageMetadata("/");
@@ -40,7 +39,7 @@ const homepageFaqs = [
   {
     question: "¿Se publican artículos en el blog?",
     answer:
-      "Aún no hay artículos publicados. La página del blog lo indica claramente y no muestra publicaciones ficticias.",
+      "Los artículos se muestran en el blog cuando se publican desde el panel de administración.",
   },
   {
     question: "¿El formulario de contacto envía mensajes?",
@@ -74,22 +73,8 @@ const steps = [
 ];
 
 export default function Home() {
-  const websiteStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "FreePixelKit",
-    url: `${SITE_URL}/`,
-    inLanguage: "es",
-  };
-
   return (
     <main id="contenido-principal">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteStructuredData).replace(/</g, "\\u003c"),
-        }}
-      />
       <section className="hero">
         <div className="container hero__inner">
           <div className="hero__copy">

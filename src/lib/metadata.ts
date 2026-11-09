@@ -24,8 +24,13 @@ export function createPageMetadata(path: string): Metadata {
       locale: "es_ES",
       type: "website",
     },
+    twitter: {
+      card: "summary_large_image",
+      title: page.title,
+      description: page.description,
+    },
     ...(!page.indexable
-      ? { robots: { index: false, follow: true } }
+      ? { robots: { index: false, follow: page.follow ?? true } }
       : {}),
   };
 }

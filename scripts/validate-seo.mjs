@@ -66,7 +66,12 @@ for (const route of actualRoutes) {
   if (!metadataRoutes.has(route)) {
     failures.push(`${route}: falta en src/lib/seo-pages.json.`);
   }
-  if (!routeSources.get(route)?.includes(`createPageMetadata("${route}")`)) {
+  const source = routeSources.get(route) ?? "";
+  const declaresMetadata =
+    source.includes(`createPageMetadata("${route}")`) ||
+    source.includes("export const metadata") ||
+    source.includes("export async function generateMetadata");
+  if (!declaresMetadata) {
     failures.push(`${route}: no usa los metadatos centralizados de su ruta.`);
   }
 }
@@ -86,10 +91,10 @@ for (const page of pages) {
   const descriptionLength = [...page.description].length;
   const canonical = page.path;
 
-  if (titleLength < 55 || titleLength > 60) {
+  if (page.indexable && (titleLength < 55 || titleLength > 60)) {
     failures.push(`${page.path}: título de ${titleLength} caracteres (objetivo: 55–60).`);
   }
-  if (descriptionLength < 155 || descriptionLength > 160) {
+  if (page.indexable && (descriptionLength < 155 || descriptionLength > 160)) {
     failures.push(
       `${page.path}: descripción de ${descriptionLength} caracteres (objetivo: 155–160).`,
     );

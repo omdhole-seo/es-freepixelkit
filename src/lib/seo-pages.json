@@ -56,8 +56,49 @@
   {
     "path": "/blog/",
     "title": "Guías de imagen y novedades para tus fotos | FreePixelKit",
-    "description": "Consulta las guías de imagen y novedades de FreePixelKit. Los artículos aparecerán cuando haya contenido completo y revisado; todavía no hay publicaciones.",
-    "indexable": false
+    "description": "Guías prácticas sobre imágenes, tamaños y formatos. Aprende a optimizar archivos para la web y encuentra herramientas útiles para cada tarea en FreePixelKit.",
+    "indexable": true
+  },
+  {
+    "path": "/blog/[slug]/",
+    "title": "Guía práctica para imágenes y diseño | Blog FreePixelKit",
+    "description": "Lee esta guía sobre imágenes y herramientas. Consulta pasos claros, ejemplos y enlaces útiles para resolver una tarea visual con información práctica y precisa.",
+    "indexable": true
+  },
+  {
+    "path": "/admin/",
+    "title": "Admin Dashboard | FreePixelKit",
+    "description": "Manage FreePixelKit blog posts, drafts, and publications in the private administration panel.",
+    "indexable": false,
+    "follow": false
+  },
+  {
+    "path": "/admin/blog/",
+    "title": "Blog Management | FreePixelKit Admin",
+    "description": "Search, filter, and manage FreePixelKit blog posts, categories, statuses, and publication dates.",
+    "indexable": false,
+    "follow": false
+  },
+  {
+    "path": "/admin/blog/new/",
+    "title": "Create New Post | FreePixelKit Admin",
+    "description": "Create a FreePixelKit blog post with content, a featured image, category, status, and search metadata.",
+    "indexable": false,
+    "follow": false
+  },
+  {
+    "path": "/admin/blog/[id]/edit/",
+    "title": "Edit Post | FreePixelKit Admin",
+    "description": "Edit a FreePixelKit blog post, including its content, featured image, dates, and search and social metadata.",
+    "indexable": false,
+    "follow": false
+  },
+  {
+    "path": "/admin/login/",
+    "title": "Admin Login | FreePixelKit",
+    "description": "Sign in to the private FreePixelKit blog administration panel using server-configured credentials.",
+    "indexable": false,
+    "follow": false
   },
   {
     "path": "/contact/",
